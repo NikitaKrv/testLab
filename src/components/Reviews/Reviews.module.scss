@@ -1,0 +1,55 @@
+:global {
+	.slick-list {
+		padding: 32px 31px 50px;
+
+		@media (max-width: 768px) {
+			padding-left: 13px;
+			padding-right: 10px;
+		}
+
+		@media (max-width: 375px) {
+			padding-left: 30px;
+		}
+
+		@media (max-width: 320px) {
+			padding-left: 20px;
+		}
+	}
+
+	.slick-dots {
+		bottom: -10px;
+
+		li {
+			width: 8px;
+			height: 8px;
+			margin: 0 8px;
+
+			&.slick-active {
+				div {
+					background-color: rgb(42, 108, 234);
+				}
+			}
+		}
+	}
+}
+
+.reviews {
+	background-color: var(--color-bg-secondary);
+	padding-bottom: 50px;
+}
+
+.slider {
+	//position: relative;
+}
+
+.dots {
+	display: flex;
+	gap: 30px;
+}
+
+.dotsItem {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: rgb(194, 200, 205);
+}

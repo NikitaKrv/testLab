@@ -1,0 +1,61 @@
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--font: graphik, sans-serif;
+	--color-text: rgb(25, 28, 31);
+	--color-text-secondary: rgb(94, 100, 106);
+	--color-bg: rgb(255, 255, 255);
+	--color-bg-secondary: rgb(246, 248, 250);
+	--color-primary: rgb(48, 108, 234);
+	--color-primary-hover: rgb(57, 125, 255);
+}
+
+body {
+	color: var(--color-text);
+	margin: 0;
+	background-color: var(--color-bg);
+	font-family: var(--font);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1em;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	color: inherit;
+}
+
+input {
+	border: none;
+	outline: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}

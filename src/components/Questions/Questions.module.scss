@@ -1,0 +1,76 @@
+.questions {
+	margin-top: 41px;
+	margin-bottom: 80px;
+
+	@media (max-width: 768px) {
+		margin-bottom: 56px;
+	}
+}
+
+.questionItem {
+	padding: 24px 0;
+	border-bottom: 1px solid rgb(236, 239, 242);
+	border-top: 1px solid rgb(236, 239, 242);
+
+	svg {
+		width: 24px;
+		height: 24px;
+		transition: transform .2s linear;
+	}
+
+	div:first-child {
+		display: flex;
+		justify-content: space-between;
+		gap: 24px;
+		align-items: center;
+		cursor: pointer;
+		transition: color .2s linear;
+
+		&:hover {
+			color: rgb(42, 108, 234);
+
+			circle {
+				transition: stroke .2s linear;
+				stroke: rgb(42, 108, 234);
+			}
+
+			path {
+				transition: fill .2s linear;
+				fill: rgb(42, 108, 234);
+			}
+		}
+
+		@media (max-width: 768px) {
+			align-items: flex-start;
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: 16px 0;
+	}
+}
+
+.open {
+	transform: rotate(45deg);
+}
+
+.title {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 32px;
+}
+
+.text {
+	margin-top: 24px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 32px;
+	color: var(--color-text-secondary);
+
+	@media (max-width: 375px) {
+		width: 90%;
+		margin-top: 16px;
+		font-size: 16px;
+		line-height: 28px;
+	}
+}

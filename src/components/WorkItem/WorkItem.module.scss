@@ -1,0 +1,52 @@
+.workItem {
+	width: 280px;
+	height: 164px;
+
+	.img {
+		width: 72px;
+		height: 72px;
+		margin-bottom: 16px;
+
+		@media (max-width: 768px) {
+			width: 56px;
+			height: 56px;
+		}
+	}
+
+	.title {
+		font-weight: 600;
+		line-height: 24px;
+		margin-bottom: 4px;
+
+		@media (max-width: 768px) {
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		@media (max-width: 320px) {
+			max-width: 216px;
+		}
+	}
+
+	.text {
+		color: var(--color-text-secondary);
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+	@media (max-width: 768px) {
+		width: 342px;
+		height: 76px;
+		display: flex;
+		gap: 16px;
+		margin-bottom: 24px;
+	}
+
+	@media (max-width: 375px) {
+		margin-bottom: 32px;
+	}
+
+	@media (max-width: 320px) {
+		height: 100px;
+	}
+}

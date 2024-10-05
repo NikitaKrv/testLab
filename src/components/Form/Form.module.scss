@@ -1,0 +1,192 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+	margin-top: 44px;
+	margin-bottom: 80px;
+
+	div {
+		display: flex;
+		gap: 32px;
+
+		@media (max-width: 768px) {
+			gap: 24px;
+		}
+
+		@media (max-width: 375px) {
+			flex-direction: column;
+		}
+	}
+
+	@media (max-width: 768px) {
+		margin-bottom: 56px;
+	}
+}
+
+.formItem {
+	width: 384px;
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+
+	label {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 18px;
+		font-size: 18px;
+		line-height: 32px;
+		color: rgb(94, 100, 106);
+		transition: top .2s linear;
+		cursor: text;
+	}
+
+	input {
+		background-color: var(--color-bg-secondary);
+		width: 100%;
+		padding: 26px 16px 4px;
+		font-size: 18px;
+		line-height: 32px;
+		border: 2px solid transparent;
+		border-radius: 4px;
+		transition: border-color .2s, background-color .2s;
+		position: relative;
+
+		&.error {
+			border-color: rgb(241, 54, 54);
+		}
+
+		&:focus {
+			border-color: rgb(194, 200, 205);
+			background-color: transparent;
+
+			& + label {
+				top: 20px;
+				font-size: 14px;
+				line-height: 24px;
+				color: rgb(131, 137, 143);
+			}
+
+			& ~ .icon {
+				display: none;
+			}
+
+			& ~ .errorText {
+				display: none;
+			}
+		}
+
+		&::placeholder {
+			opacity: 0;
+		}
+
+		&:not(:placeholder-shown) {
+			background-color: transparent;
+
+			&:not(.error) {
+				border-color: rgb(194, 200, 205);
+			}
+
+			& + label {
+				top: 20px;
+				font-size: 14px;
+				line-height: 24px;
+				color: rgb(131, 137, 143);
+			}
+		}
+	}
+
+	.icon {
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translateY(-50%);
+	}
+
+	.errorText {
+		position: absolute;
+		bottom: -20px;
+		left: 0;
+		color: rgb(241, 54, 54);
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	@media (max-width: 768px) {
+		width: 352px;
+	}
+
+	@media (max-width: 375px) {
+		width: 343px;
+	}
+
+	@media (max-width: 320px) {
+		width: 288px;
+	}
+}
+
+.formItem .checkbox {
+	position: absolute;
+	opacity: 0;
+
+	& + label {
+		cursor: pointer;
+		position: relative;
+		display: flex;
+		align-items: center;
+		left: 0;
+		top: 14px !important;
+		color: var(--color-text) !important;
+
+		&:before {
+			content: '';
+			margin-right: 16px;
+			display: inline-block;
+			vertical-align: text-top;
+			border: 2px solid rgb(194, 200, 205);
+			width: 24px;
+			height: 24px;
+			border-radius: 4px;
+			background-color: rgb(255, 255, 255);
+			transition: background-color .2s linear, border-color .2s linear;
+		}
+	}
+
+	&:checked + label:before {
+		background-color: var(--color-primary);
+		border-color: var(--color-primary);
+	}
+
+	&:checked + label:after {
+		content: '';
+		position: absolute;
+		background-image: url("src/assets/check.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		left: 6px;
+		top: 5px;
+		width: 16px;
+		height: 16px;
+	}
+}
+
+.btn {
+	width: 100%;
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 600;
+	background-color: var(--color-primary);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	letter-spacing: 1px;
+	border-radius: 4px;
+	transition: background-color .2s linear;
+
+	&:hover {
+		background-color: var(--color-primary-hover);
+	}
+}
+

@@ -1,0 +1,16 @@
+.works {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 61px;
+	margin-bottom: 80px;
+
+	@media (max-width: 768px) {
+		margin-top: 42px;
+		margin-bottom: 56px;
+	}
+
+	@media (max-width: 375px) {
+		margin-top: 26px;
+	}
+}

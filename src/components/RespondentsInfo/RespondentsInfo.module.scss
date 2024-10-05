@@ -1,0 +1,45 @@
+.respondentsInfo {
+	background-color: var(--color-bg-secondary);
+}
+
+.respondentsList {
+	padding-top: 68px;
+	padding-bottom: 68px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 32px;
+
+	@media (max-width: 768px) {
+		padding-top: 20px;
+		padding-bottom: 32px;
+		gap: 20px;
+	}
+}
+
+.respondentsItem {
+	width: 592px;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+}
+
+.title {
+	font-size: 18px;
+	line-height: 32px;
+	font-weight: 600;
+	margin-bottom: 17px;
+
+	@media (max-width: 768px) {
+		margin-bottom: 46px;
+	}
+
+	@media (max-width: 375px) {
+		margin-bottom: 14px;
+	}
+}
+
+.text {
+	line-height: 28px;
+	color: var(--color-text-secondary);
+}
