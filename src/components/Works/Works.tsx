@@ -5,7 +5,7 @@ import styles from './Works.module.scss'
 
 const Works = () => {
 	return (
-		<Section title="Как это работает">
+		<Section id="work" title="Как это работает">
 			<div className={ styles.works }>
 				{ works.map(work => <WorkItem key={ work.img } { ...work } />) }
 			</div>

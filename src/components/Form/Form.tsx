@@ -61,7 +61,7 @@ const Form = () => {
 	}
 	
 	return (
-		<Section title="Отправь форму">
+		<Section id="form" title="Отправь форму">
 			<form className={ styles.form } onSubmit={ handleSubmit }>
 				<div>
 					<div className={ styles.formItem }>

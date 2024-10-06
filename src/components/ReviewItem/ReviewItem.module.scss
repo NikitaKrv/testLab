@@ -1,13 +1,20 @@
 .reviewItem {
 	padding: 22px;
 	box-shadow: 0 5px 24px 0 rgba(0, 0, 0, 0.1);
-	width: 341px;
 	height: 316px;
 	border-radius: 8px;
 	cursor: pointer;
 
+	@media (max-width: 1176px) {
+		box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.1);
+	}
+
 	&:hover {
 		box-shadow: 0 15px 24px 0 rgba(0, 0, 0, 0.1);
+
+		@media (max-width: 1176px) {
+			box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.1);
+		}
 	}
 
 	.itemHeader {
@@ -48,17 +55,19 @@
 		text-align: left;
 	}
 
-	@media (max-width: 768px) {
-		width: 331px;
+	@media (max-width: 1176px) {
+		height: 250px;
 	}
 
-	@media (max-width: 375px) {
-		width: 300px;
-		height: 336px;
+	@media (max-width: 1059px) {
+		height: 300px;
 	}
 
-	@media (max-width: 320px) {
-		width: 258px;
+	@media (max-width: 818px) {
+		height: 350px;
+	}
+
+	@media (max-width: 700px) {
 		height: auto;
 	}
 }

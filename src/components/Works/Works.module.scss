@@ -10,7 +10,13 @@
 		margin-bottom: 56px;
 	}
 
+	@media (max-width: 740px) {
+		flex-direction: column;
+		align-items: center;
+	}
+
 	@media (max-width: 375px) {
 		margin-top: 26px;
+		
 	}
 }

@@ -10,11 +10,15 @@
 		display: flex;
 		gap: 32px;
 
+		@media (max-width: 856px) {
+			width: 100%;
+		}
+
 		@media (max-width: 768px) {
 			gap: 24px;
 		}
 
-		@media (max-width: 375px) {
+		@media (max-width: 686px) {
 			flex-direction: column;
 		}
 	}
@@ -111,6 +115,10 @@
 		color: rgb(241, 54, 54);
 		font-size: 12px;
 		line-height: 16px;
+	}
+
+	@media (max-width: 856px) {
+		width: 100%;
 	}
 
 	@media (max-width: 768px) {

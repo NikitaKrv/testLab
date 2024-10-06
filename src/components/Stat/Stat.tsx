@@ -1,9 +1,11 @@
+import statPath from '../../assets/stat.png'
+import carPath from '../../assets/car.png'
 import Section from '../../wrappers/Section/Section.tsx'
 import styles from './Stat.module.scss'
 
 const Stat = () => {
 	return (
-		<Section>
+		<Section id="stat">
 			<div className={ styles.stat }>
 				<div className={ styles.statInfo }>
 					<h3 className={ styles.title }>
@@ -21,8 +23,8 @@ const Stat = () => {
 					</div>
 				</div>
 				<div className={ styles.images }>
-					<img src="/src/assets/stat.png" alt="stat" />
-					<img src="/src/assets/car.png" alt="car" />
+					<img src={ statPath } alt="stat" />
+					<img src={ carPath } alt="car" />
 				</div>
 			</div>
 		</Section>

@@ -27,17 +27,25 @@ const Reviews = () => {
 		),
 		responsive: [
 			{
-				breakpoint: 769,
+				breakpoint: 1177,
+				settings: {
+					slidesToShow: 2,
+					arrows: true
+				}
+			},
+			{
+				breakpoint: 900,
 				settings: {
 					slidesToShow: 2,
 					arrows: false
 				}
 			},
 			{
-				breakpoint: 375,
+				breakpoint: 700,
 				settings: {
 					slidesToShow: 1,
-					arrows: false
+					arrows: false,
+					adaptiveHeight: true
 				}
 			}
 		]

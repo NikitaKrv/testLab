@@ -1,18 +1,67 @@
 :global {
 	.slick-list {
-		padding: 32px 31px 50px;
+		padding: 32px 0 50px;
+		width: calc(100% - 32px);
+		margin: 0 auto 25px;
+		@media (max-width: 900px) {
+			width: 100%;
+		}
+	}
+
+	.slick-track {
+		.slick-current {
+			padding: 0 0 0 32px;
+
+			@media (max-width: 900px) {
+				padding-left: 16px;
+			}
+
+			@media (max-width: 700px) {
+				padding-left: 0;
+				padding-bottom: 30px;
+			}
+
+			& > div {
+				margin-left: 8px;
+				margin-right: 8px;
+
+			}
+
+			& ~ .slick-active {
+				padding: 0 24px;
+
+				& ~ .slick-active {
+					padding: 0 32px 0 0;
+
+					& > div {
+						margin-right: 8px;
+						margin-left: 8px;
+					}
+				}
+
+				@media (max-width: 900px) {
+					padding: 0 16px;
+				}
+			}
+		}
+	}
+
+	.slick-slide {
+		padding: 0 16px;
+
+		& > div {
+			@media (max-width: 700px) {
+				padding-bottom: 50px;
+			}
+		}
+
+		@media (max-width: 700px) {
+			padding-top: 32px;
+			padding-bottom: 30px;
+		}
 
 		@media (max-width: 768px) {
-			padding-left: 13px;
-			padding-right: 10px;
-		}
-
-		@media (max-width: 375px) {
-			padding-left: 30px;
-		}
-
-		@media (max-width: 320px) {
-			padding-left: 20px;
+			padding: 0 8px;
 		}
 	}
 
@@ -30,16 +79,16 @@
 				}
 			}
 		}
+
+		@media (max-width: 375px) {
+			bottom: -30px;
+		}
 	}
 }
 
 .reviews {
 	background-color: var(--color-bg-secondary);
 	padding-bottom: 50px;
-}
-
-.slider {
-	//position: relative;
 }
 
 .dots {

@@ -13,7 +13,7 @@ const Questions = () => {
 	}
 	
 	return (
-		<Section title="Вопросы и ответы">
+		<Section id="questions" title="Вопросы и ответы">
 			<div className={ styles.questions }>
 				{
 					questions.map(question => {

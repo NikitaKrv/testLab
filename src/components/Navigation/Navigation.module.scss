@@ -4,7 +4,7 @@
 	justify-content: space-between;
 	align-items: center;
 
-	img {
+	svg {
 		z-index: 999;
 	}
 
@@ -18,13 +18,25 @@
 			transition: border-bottom-color .2s linear;
 			position: relative;
 
+			a {
+				display: block;
+				//width: 100%;
+			}
+
+			&:hover {
+				border-bottom-color: #fff;
+			}
+
 			@media (max-width: 768px) {
 				font-size: 18px;
 				line-height: 32px;
 				margin: 0 16px;
-				padding: 16px 0;
 				color: rgb(131, 137, 143);
 				border-top: 1px solid rgb(236, 239, 242);
+
+				a {
+					padding: 16px 0;
+				}
 
 				&:last-child {
 					border-bottom: 1px solid rgb(236, 239, 242);
@@ -36,7 +48,7 @@
 
 				&:after {
 					content: '';
-					background-image: url("src/assets/arrows/next.svg");
+					background-image: url("/next.svg");
 					background-position: center;
 					background-size: cover;
 					width: 24px;
@@ -46,10 +58,6 @@
 					top: 50%;
 					transform: translateY(-50%);
 				}
-			}
-
-			&:hover {
-				border-bottom-color: #fff;
 			}
 		}
 
@@ -124,5 +132,11 @@
 		@media (max-width: 768px) {
 			display: block;
 		}
+	}
+}
+
+.openLogo {
+	path {
+		fill: var(--color-text);
 	}
 }

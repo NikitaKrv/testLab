@@ -3,8 +3,8 @@ import Stat from '../../components/Stat/Stat.tsx'
 import Reviews from '../../components/Reviews/Reviews.tsx'
 import Questions from '../../components/Questions/Questions.tsx'
 import RespondentsInfo from '../../components/RespondentsInfo/RespondentsInfo.tsx'
-import Footer from '../../components/Footer/Footer.tsx'
 import Form from '../../components/Form/Form.tsx'
+import Footer from '../../components/Footer/Footer.tsx'
 
 const Main = () => {
 	return (

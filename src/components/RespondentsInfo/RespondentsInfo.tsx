@@ -1,5 +1,5 @@
-import Section from '../../wrappers/Section/Section.tsx'
 import { respondents } from '../../data/respondents.ts'
+import Section from '../../wrappers/Section/Section.tsx'
 import styles from './RespondentsInfo.module.scss'
 
 const RespondentsInfo = () => {

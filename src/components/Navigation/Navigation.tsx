@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { links } from '../../data/links.ts'
+import Logo from '../../assets/logo.svg?react'
 import styles from './Navigation.module.scss'
 
 const Navigation = () => {
@@ -11,12 +12,17 @@ const Navigation = () => {
 	
 	return (
 		<div className={ styles.navigation }>
-			<img src="/src/assets/logo.png" alt="" />
+			<Logo className={ `${ open && styles.openLogo }` } />
 			<nav>
 				<ul className={ `${ styles.links } ${ open && styles.open }` }>
 					{
-						links.map(link => <li key={ link } className={ styles.link }>
-							{ link }
+						links.map(link => <li key={ link.to } className={ styles.link }>
+							<a
+								onClick={ () => setOpen(false) }
+								href={ `#${ link.to }` }
+							>
+								{ link.text }
+							</a>
 						</li>)
 					}
 				</ul>
